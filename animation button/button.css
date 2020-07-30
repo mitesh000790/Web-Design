@@ -1,0 +1,145 @@
+* {
+    outline:none;
+    text-decoration:none;
+    border:none;
+  }
+  body {
+    background-color: black;
+    font-size: 2rem;
+    font-family: arial;
+  } 
+  div { 
+    margin: 50px auto;
+  }
+  button {
+    width: 160px; height: 60px;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    cursor:pointer;
+    border-radius: 25px;
+  }
+  button a {
+    color: #fff;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  button span.effect {
+    height: 60px; width: 160px;
+    position: absolute;
+    top: 0;  left: 0;
+  }
+  .box{
+      margin: 249px 600px;
+  }
+  button span span {
+    content:"";
+    position: absolute;
+    margin: auto;
+    height: 20px; width: 4px;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    opacity: 0;
+  }
+  
+  button span span:nth-of-type(1) {
+    top: -20px; left: 0; right: 0;
+  }
+  button span span:nth-of-type(2) {
+    bottom: -20px; left: 0; right: 0;
+  }
+  button span span:nth-of-type(3) {
+    top:0;  bottom: 0; left: -10px;
+  }
+  button span span:nth-of-type(4) {
+    top:0; bottom: 0;  right: -10px;
+  }
+  button span span:nth-of-type(5) {
+    top: -20px; left: -70%;  right: 0;
+    transform:rotate(-30deg);
+  }
+  button span span:nth-of-type(6) {
+    top: -20px;  left: 0;  right: -70%;
+    transform:rotate(30deg);
+  }
+  button span span:nth-of-type(7) {
+    bottom: -20px;  right: 0;  left: -70%;
+    transform:rotate(30deg);
+  }
+  button span span:nth-of-type(8) {
+    bottom: -20px;  left: 0;  right: -70%;
+    transform:rotate(-30deg);
+  }
+  
+  @keyframes bounce {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1.1);}
+  }
+  
+  button.active {
+    animation: bounce 0.3s ease-out 1;
+  }
+  
+  button.active span span:nth-of-type(1) {
+    animation: anim1 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(2) {
+    animation: anim2 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(3) {
+    animation: anim3 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(4) {
+    animation: anim4 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(5) {
+    animation: anim5 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(6) {
+    animation: anim6 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(7) {
+    animation: anim7 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(8) {
+    animation: anim8 0.4s ease-out 1;
+  }
+  
+  @keyframes anim1 {
+    0%{transform: scaleY(0.5);opacity: 0;}
+    50%{transform: translateY(-10px) scaleY(1.4); opacity: 1;}
+    100%{transform: translateY(-20px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim2 {
+    0%{transform: scaleY(1);opacity: 0;}
+    50%{transform: translateY(10px) scaleY(1.4); opacity: 1;}
+    100%{transform: translateY(20px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim3 {
+    0%{transform: rotate(90deg) scaleX(0.5);opacity: 0;}
+    50%{transform: rotate(90deg) translateY(10px) scaleX(1.4); opacity: 1;}
+    100%{transform: rotate(90deg) translateY(20px) scaleX(0.5);opacity: 0;}
+  }
+  @keyframes anim4 {
+    0%{transform: rotate(90deg) scaleX(0.5);opacity: 0;}
+    50%{transform: rotate(90deg) translateY(-10px) scaleX(1.4); opacity: 1;}
+    100%{transform: rotate(90deg) translateY(-20px) scaleX(0.5);opacity: 0;}
+  }
+  @keyframes anim5 {
+    0%{transform: rotate(-30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(-30deg) translateY(-8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(-30deg) translateY(-16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim6 {
+    0%{transform: rotate(30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(30deg) translateY(-8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(30deg) translateY(-16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim7 {
+    0%{transform: rotate(30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(30deg) translateY(8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(30deg) translateY(16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim8 {
+    0%{transform: rotate(-30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(-30deg) translateY(8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(-30deg) translateY(16px) scaleY(0.5);opacity: 0;}
+  }

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#96fab1;
+}
+
+.box{
+    position: relative;
+    border: 5px solid rgb(250,135,160);
+    background: #ffffff;
+    width: 360px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.box .back, .box .front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.box .front{
+    background:rgb(250,135,160);
+    transform-origin: left;
+    line-height: 70px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: .5px;
+    color: #ffffff; 
+    transition:.4s ;
+}
+
+
+.box:hover .front p{
+    opacity: 0;
+    transition: .4s;
+}
+
+.box:hover .front{
+    transform: rotateY(100deg)skewY(5deg);
+}
+
+.box .back{
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    box-shadow: inset 0 0 15px rgb(241,44,87);
+    line-height: 65px;
+    text-align: center;
+   
+}
+
+.box .back button{
+    cursor: pointer;
+    width: 25%;
+    height: 50%;
+    color: #ffffff;
+    background: rgb(241,44,87);
+    letter-spacing: .5px;
+    border: 1px solid rgb(241,44,87);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.box .back button:hover{
+background-color: rgb(250,135,160);
+border: 1px solid rgb(250,135,160);
+}
+
+.box .back input{
+    width: 65%;
+    height: 50%;
+    padding-left: 12px;
+    color: rgb(241,44,87);
+    font-weight: 600;
+    border: 1px solid rgb(241,44,87);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+

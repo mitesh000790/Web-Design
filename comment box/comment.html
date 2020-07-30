@@ -1,0 +1,25 @@
+<html>
+    <link rel="stylesheet" href="comment.css">
+    <body>
+        <div class="comment-box">
+            <div class="front-side">
+                <p>Comment Box</p>
+            </div>
+            <div class="back-side">
+                <div class="comment">
+                    <input type="text" class="email" required>
+                    <label class="label">Enter Comment</label>
+                    <input type="checkbox" id="checkbox" onclick="clean()">
+                    <label class="button" for="checkbox"></label>
+                </div>
+            </div>
+    </div>
+    <script>
+        let comment = document.querySelector('.email')
+        function clean(){
+            comment.value = ""
+        }
+    </script>
+    </script>
+    </body>
+</html>

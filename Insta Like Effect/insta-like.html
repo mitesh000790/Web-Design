@@ -1,0 +1,22 @@
+
+<link rel="stylesheet" href="insta-like.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<body>
+<div class="main">
+    <div class="shape">
+        <img src="pf3.jpg" ondblclick="heartShap()">
+        <i class="fa fa-heart fa-3x" aria-hidden="true"></i>
+    </div>
+</div>
+
+</body>
+<script>
+    function heartShap(){
+        var heart =document.querySelector(".fa");
+        heart.classList.add("heart");
+        setTimeout(function(){
+            heart.classList.remove("heart");
+    },1000);
+}
+ </script>
