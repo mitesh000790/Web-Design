@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+}
+
+.swipe-box{
+    --color: #ff4754;
+    background: var(--color);
+    transition: background .6s;
+    padding: .6rem 1.8rem;
+    cursor: grab; 
+    width: 20%;
+    height: 12%;
+    border-radius: 20px;
+}
+
+.swipe-box.animation{
+    animation: swipe .6s;
+}
+
+
+@keyframes swipe{
+    from{
+        transform: translateX(0);
+    }
+
+    65%{
+        transform: translateX(-.5rem);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
