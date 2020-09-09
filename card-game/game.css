@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color:blue;
+    display: flex;
+}
+
+.gameContainer {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.cardGame {
+    width: 23%;
+    height: 23%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.cardGame:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardGame.flip {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.front, .back {
+    background-color: #a4bbe0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
