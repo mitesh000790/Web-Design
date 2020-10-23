@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color:black;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1.2s linear;
+}
+body.flip {
+  background-color:#20ce71;
+}
+button {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px 16px 15px;
+    height: 70px;
+    width:250px;
+    position: relative;
+    font-family: catamaran;
+    font-size: 1em;
+    line-height: 1em;
+    border: 0;
+    font-weight: 600;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 35px;
+    box-shadow: 2px 8px 32px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.2s ease, background-color 150ms ease;
+  }
+  button::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    top: px;
+    left: 5px;
+    background-color: rgb(41, 36, 36);
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+  button:focus {
+    box-shadow: 0 8px 64px 16px rgba(0, 0, 0, 0.5);
+    outline: none;
+  } 
+  button:hover, button:active {
+    background-color: #eee;
+  }
+  #car {
+    position: absolute;
+    margin-right: 13px;
+    margin-left: 7px;
+    transform-origin: 20% 100%;
+    opacity: 1;
+    color: whitesmoke;
+    font-size: 25px;
+  }
+  span{
+    margin-left: 65px;
+    font-family: catamaran;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(180px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-up-fade {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-16px);
+      opacity: 0;
+    }
+  }
+  @keyframes roll-out {
+    0% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20%{
+      opacity: 0.8;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    70%{
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(170px);
+      opacity: 0;
+    }
+  }
+  .checked-out button::before{
+    animation: slide 1s 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .checked-out span {
+    animation: slide-up-fade 150ms 1;
+    animation-fill-mode: both;
+  }
+  
+  .checked-out #car {
+    animation: roll-out 1s 1 ;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes checkmark {
+    from {
+      transform:translateY(0);
+      opacity: 0;
+    }
+    to {
+      transform:translateY(0);
+      opacity: 1;
+    }
+  }
+  #verify{
+    position: absolute;
+    left: calc(50% - 12px);
+    font-size: 40px;
+    position: absolute;
+    margin-right: 13px;
+    margin-left: -5px;
+    transform-origin: 20% 100%;
+    opacity: 0;
+    color: white;
+    
+  }
+  .checked-out #verify{
+    animation: checkmark 1150ms 1 1150ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .checked-out button {
+    background-color:#26a863;
+    transition-delay: 1150ms;
+  }
+  
